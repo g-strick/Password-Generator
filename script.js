@@ -7,7 +7,6 @@ var passwordObject = {
     specialChars: ""
   };
 
-
 //   Characters that can be used in the password generation
 var passwordCharacters = "";
 
@@ -57,6 +56,7 @@ function generatePassword() {
         
     convertPasswordChars();
     
+    var password = '';
     for (var i = 0; i < passwordObject.length; i++) {
         // generate a random number between 1 and the length of passwordCharacters. Math.floor rounds down so I add a 1 to it.
         var rand = Math.floor(Math.random() * passwordCharacters.length + 1);
