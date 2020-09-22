@@ -48,9 +48,9 @@ function generatePassword() {
     passwordObject.lower = confirm("Would you like lowercase characters?")
     passwordObject.numbers = confirm("Would you like numbers?")
     passwordObject.specialChars = confirm("Would you like special characters?")
-    
+
     if (passwordObject.upper == false && passwordObject.lower == false && passwordObject.numbers == false && passwordObject.specialChars == false) {
-        alert("you did not choose any options. Defaulting to lowercase letters.")
+        alert("You did not choose any options. Defaulting to lowercase letters.")
         passwordObject.lower = true;
     }
         console.log('passwordObject:', passwordObject)
@@ -76,9 +76,8 @@ generate.addEventListener("click", writePassword);
 function writePassword() {
   
     var password = generatePassword();
-
-    var passwordText = document.querySelector("#password").toString;
-    passwordText = password;
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
     console.log('password:', password)
     
 }
